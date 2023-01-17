@@ -2,7 +2,7 @@ import React from 'react'
 
 const Navbar = () => {
   return (
-    <nav className="navbar fixed-top navbar-light bg-white">
+    <nav className="navbar fixed-top navbar-light bg-white shadow">
         <div className="container-fluid d-flex flex-row align-items-center">
           <div className='d-flex align-items-center '>
             <img style={{height:'30px',width:'30px'}} src='https://bootstrapmade.com/demo/templates/NiceAdmin/assets/img/logo.png' alt=''/>
