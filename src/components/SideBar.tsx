@@ -1,8 +1,13 @@
 import React from 'react'
 
-const SideBar = () => {
+type sidebarProps = {
+    style:string
+    setStyle:React.Dispatch<React.SetStateAction<string>>
+}
+
+const SideBar = (props:sidebarProps) => {
   return (
-    <div className='bg-white col-3 pt-3 ps-3 pe-3'>
+    <div className={`bg-white heightMax col-3 pt-3 ps-3 pe-3 position-fixed ${props.style}`}>
         <div className='p-3 ms-2 '><i className="bi bi-grid"></i><label className='ms-2 txTcoL'>Dashboard</label></div>
         <div className=" d-flex justify-content-between p-3 ms-2 box" data-bs-toggle="collapse" data-bs-target="#Components" aria-expanded="false" aria-controls="Components">
             <i className="bi bi-menu-button-wide"><label className='ms-2 txtCol'>Components</label></i>

@@ -22,6 +22,10 @@ body {
   font-size: 0.8rem;
 }
 
+.fontSize {
+  font-size: 0.9rem;
+}
+
 .pTop {
   padding-top: 60px;
 }
@@ -29,4 +33,30 @@ body {
 .box:hover {
   color: #4154f1;
   background: rgba(236, 236, 252, 0.527);
+}
+
+.bordeR {
+  border-top: 0.5px solid #dfdfdf !important;
+}
+
+.padLeftSmall {
+  padding-left: 360px !important;
+  padding-top: 30px !important;
+}
+
+.padLeftBig  {
+  padding-top: 30px !important;
+}
+
+.heightMax {
+  max-height: 90vh !important;
+  overflow-y: scroll;
+}
+
+.show {
+  display: block;
+}
+
+.hide {
+  display: none;
 }

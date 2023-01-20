@@ -1,6 +1,24 @@
 import React from 'react'
+ type navbarProps = {
+  style:string
+  setStyle:React.Dispatch<React.SetStateAction<string>>
+  padding:string
+  setPadding:React.Dispatch<React.SetStateAction<string>>
+ }
 
-const Navbar = () => {
+const Navbar = (props:navbarProps) => {
+
+  const showHide=()=>{
+    if(props.style=='show'){
+      props.setStyle('hide')
+      props.setPadding('padLeftBig')
+    }
+    else{
+      props.setStyle('show')
+      props.setPadding('padLeftSmall')
+    }
+  }
+
   return (
     <nav className="navbar fixed-top navbar-light bg-white shadow">
         <div className="container-fluid d-flex flex-row align-items-center">
@@ -9,7 +27,7 @@ const Navbar = () => {
             <label className='fs-3 fw-bold txtCol ps-1'>NiceAdmin</label>
           </div>
           <div className='d-flex flex-row align-items-center txtCol col-5'>
-            <i className="bi bi-list fs-3"></i>
+            <i className="bi bi-list fs-3" onClick={showHide}></i>
             <div className='border border-secondary-subtle ms-3 p-2 rounded'>
                 <input className='border-0 bgLight' style={{outline:'none'}} placeholder='search'/>
                 <i className="bi bi-search txtCol ps-1"></i>

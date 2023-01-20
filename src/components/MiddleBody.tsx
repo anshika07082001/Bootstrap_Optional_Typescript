@@ -1,53 +1,60 @@
 import React from 'react'
 import Chart1 from './Chart1'
+import RightBody from './RightBody'
 
-const MiddleBody = () => {
+type middleProps = {
+  padding:string
+  setPadding:React.Dispatch<React.SetStateAction<string>>
+}
+
+const MiddleBody = (props:middleProps) => {
   return (
-    <div className='p-4  col-6'>
+    <div className={` col-12 d-flex flex-column ${props.padding}`}>
       <span className='fs-3 txtCol'>Dashboard</span>
       <div className='text-secondary fSize'>
         <span >Home</span>
         <span className='ms-1'>/</span>
         <span className='ms-1 fw-bolder'>Dashboard</span>
       </div>
-      <div className='d-flex flex-row col-12 mt-3'>
-        <div className='shadow-sm bg-white d-flex flex-column p-4 ps-5 pe-5 col-6 rounded'>
-          <div className='d-flex flex-row col-12 justify-content-between text-secondary'>
-            <div>
-              <label className='txtCol fs-5'>Sales</label>
-              <label className='ms-1 '>|</label>
-              <label className='ms-1'>Today</label>
+      <div className='d-flex flex-row col-12 '>
+        <div className='d-flex flex-column col-8'>
+          <div className='d-flex flex-row col-12 mt-3 justify-content-between'>
+            <div className='shadow bg-white d-flex flex-column p-3 col-5 ms-2 rounded'>
+              <div className='d-flex flex-row justify-content-between col-12 text-secondary'>
+                <div>
+                  <label className='txtCol fs-5'>Sales</label>
+                  <label className='ms-1 '>|</label>
+                  <label className='ms-1'>Today</label>
+                </div>
+                <i className='bi bi-three-dots'></i>
+              </div>
+              <div className='d-flex flex-row col-12 mt-2'>
+                <div className='p-2 ps-3 pe-3 txTcoL rounded-circle' style={{background:'rgb(233 235 241)'}}><i className='bi bi-cart fs-3'></i></div>
+                <div className='d-flex flex-column ms-3'>
+                  <label className='fs-3 txtCol fw-bold'>145</label>
+                  <label><span className='text-success'>12%</span><span className='text-secondary ms-1'>increase</span></label>
+                </div>
+              </div>
             </div>
-            <i className='bi bi-three-dots'></i>
-          </div>
-          <div className='d-flex flex-row col-12 mt-2'>
-            <div className='p-2 ps-3 pe-3 txTcoL rounded-circle' style={{background:'rgb(233 235 241)'}}><i className='bi bi-cart fs-3'></i></div>
-            <div className='d-flex flex-column ms-3'>
-              <label className='fs-3 txtCol fw-bold'>145</label>
-              <label><span className='text-success'>12%</span><span className='text-secondary ms-1'>increase</span></label>
+            <div className='shadow bg-white d-flex flex-column p-3 col-6 rounded'>
+              <div className='d-flex flex-row col-12 justify-content-between text-secondary'>
+                <div>
+                  <label className='txtCol fs-5'>Revenue</label>
+                  <label className='ms-1 '>|</label>
+                  <label className='ms-1'>This Month</label>
+                </div>
+                <i className='bi bi-three-dots'></i>
+              </div>
+              <div className='d-flex flex-row col-12 mt-2'>
+                <div className='p-2 ps-3 pe-3 bg-success-subtle rounded-circle' style={{background:'rgb(233 235 241)'}}><i className='bi bi-currency-dollar fs-3 text-success'></i></div>
+                <div className='d-flex flex-column ms-3'>
+                  <label className='fs-3 txtCol fw-bold'>$3,264</label>
+                  <label><span className='text-success'>12%</span><span className='text-secondary ms-1'>increase</span></label>
+                </div>
+              </div>
             </div>
           </div>
-        </div>
-        <div className='shadow-sm bg-white d-flex flex-column p-4 ps-5 pe-5 col-6 rounded'>
-          <div className='d-flex flex-row col-12 justify-content-between text-secondary'>
-            <div>
-              <label className='txtCol fs-5'>Revenue</label>
-              <label className='ms-1 '>|</label>
-              <label className='ms-1'>This Month</label>
-            </div>
-            <i className='bi bi-three-dots'></i>
-          </div>
-          <div className='d-flex flex-row col-12 mt-2'>
-            <div className='p-2 ps-3 pe-3 bg-success-subtle rounded-circle' style={{background:'rgb(233 235 241)'}}><i className='bi bi-currency-dollar fs-3 text-success'></i></div>
-            <div className='d-flex flex-column ms-3'>
-              <label className='fs-3 txtCol fw-bold'>$3,264</label>
-              <label><span className='text-success'>12%</span><span className='text-secondary ms-1'>increase</span></label>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <div className='shadow-sm bg-white d-flex flex-column p-4 col-12 rounded mt-4 ms-1'>
+          <div className='shadow bg-white d-flex flex-column p-4 col-12 rounded mt-4 ms-1'>
           <div className='d-flex flex-row col-12 justify-content-between text-secondary'>
             <div>
               <label className='txtCol fs-5'>Customers</label>
@@ -63,17 +70,15 @@ const MiddleBody = () => {
               <label><span className='text-danger'>12%</span><span className='text-secondary ms-1'>decrease</span></label>
             </div>
           </div>
-      </div>
-
-      <div className='col-12 bg-white p-3 mt-4 shadow-sm m-1 rounded pb-5'>
+          </div>
+          <div className='col-12 bg-white p-3 mt-4 shadow m-1 rounded pb-5'>
       <div className='col-12 d-flex flex-row align-items-center justify-content-between'>
           <label className='text-secondary fs-5'><span className='fs-5 txtCol'>Reports</span><span className='ms-1'>/</span><span className='ms-1'>Today</span></label>
           <i className='bi bi-three-dots'></i>
         </div>
       <Chart1/>
-      </div>
-
-      <div className='col-12 d-flex flex-column p-3 rounded bg-white mt-4 shadow-sm m-1'>
+          </div>
+          <div className='col-12 d-flex flex-column p-3 rounded bg-white mt-4 shadow m-1'>
         <div className='col-12 d-flex flex-row align-items-center justify-content-between p-3'>
           <label className='text-secondary fs-5'><span className='fs-5 txtCol'>Recent Sales</span><span className='ms-1'>|</span><span className='ms-1'>Today</span></label>
           <i className='bi bi-three-dots'></i>
@@ -135,11 +140,8 @@ const MiddleBody = () => {
         </table>
         <hr/>
         <label className='fw-light p-2'>Showing 1 to 5 of 5 entries</label>
-      </div>
-      
-     
-
-      <div className=' col-12 d-flex flex-column p-3 rounded bg-white mt-4 shadow-sm m-1'>
+          </div>
+          <div className=' col-12 d-flex flex-column p-3 rounded bg-white mt-4 shadow m-1'>
         <div className='col-12 d-flex flex-row align-items-center justify-content-between p-3'>
           <label className='text-secondary fs-5'><span className='fs-5 txtCol'>Top Selling</span><span className='ms-1'>|</span><span className='ms-1'>Today</span></label>
           <i className='bi bi-three-dots'></i>
@@ -188,7 +190,19 @@ const MiddleBody = () => {
             <td className='p-2 fw-light text-dark'>$5,828</td>
           </tr>
         </table>
-      </div>  
+          </div>  
+        </div>
+        <RightBody/>
+      </div>
+      {/* Footer */}
+      <div className='col-12 fw-light d-flex flex-column justify-content-center align-items-center p-2 pt-4 fontSize txtCol bordeR mt-4'>
+        <label>
+          <span>©</span><span>Copyright </span><span className='fw-bold'>NiceAdmin </span>.<span>All Rights Reserved</span>
+        </label>
+        <label>
+          <span>Designed by </span><span className='txTcoL'> BootstrapMade</span>
+        </label>
+      </div>
     </div>
   )
 }
