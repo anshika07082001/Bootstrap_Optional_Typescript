@@ -5,11 +5,13 @@ import Body from './components/Body';
 
 function App() {
   var [style,setStyle]=useState('show')
-  var [padding,setPadding]=useState('padLeftBig')
+  var [padding,setPadding]=useState('padLeftSmall')
   return (
     <div className='App'>
-    <Navbar style={style} setStyle={setStyle} padding={padding} setPadding={setPadding}/>
-    <Body style={style} setStyle={setStyle} padding={padding} setPadding={setPadding}/>
+      {/* Navbar Component */}
+      <Navbar style={style} setStyle={setStyle} padding={padding} setPadding={setPadding}/>
+      {/* Body Component */}
+      <Body style={style} setStyle={setStyle} padding={padding} setPadding={setPadding}/>
     </div>
   );
 }

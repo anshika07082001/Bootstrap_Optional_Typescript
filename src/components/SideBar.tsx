@@ -6,8 +6,8 @@ type sidebarProps = {
 }
 
 const SideBar = (props:sidebarProps) => {
-  return (
-    <div className={`bg-white heightMax col-3 pt-3 ps-3 pe-3 position-fixed ${props.style}`}>
+    return (
+    <div className={`bg-white heightMax col-md-4 pt-3 ps-3 pe-3 position-fixed ${props.style}`}>
         <div className='p-3 ms-2 '><i className="bi bi-grid"></i><label className='ms-2 txTcoL'>Dashboard</label></div>
         <div className=" d-flex justify-content-between p-3 ms-2 box" data-bs-toggle="collapse" data-bs-target="#Components" aria-expanded="false" aria-controls="Components">
             <i className="bi bi-menu-button-wide"><label className='ms-2 txtCol'>Components</label></i>
@@ -29,8 +29,8 @@ const SideBar = (props:sidebarProps) => {
             </ul>
         </div>
         <div className="d-flex justify-content-between p-3 ms-2  box " data-bs-toggle="collapse" data-bs-target="#forms" aria-expanded="false" aria-controls="forms">
-        <i className="bi bi-journal-text"><label className='ms-2 txtCol'>Forms</label></i>
-        <i className="bi bi-chevron-down"></i>
+            <i className="bi bi-journal-text"><label className='ms-2 txtCol'>Forms</label></i>
+            <i className="bi bi-chevron-down"></i>
         </div>
         <div className="collapse" id="forms">
             <ul style={{listStyle:'circle'}} className='txtCol'>
@@ -41,8 +41,8 @@ const SideBar = (props:sidebarProps) => {
             </ul>
         </div>
         <div className="d-flex justify-content-between p-3 ms-2 box " data-bs-toggle="collapse" data-bs-target="#Tables" aria-expanded="false" aria-controls="Tables">
-        <i className="bi bi-layout-text-window-reverse"><label className='ms-2 txtCol'>Tables</label></i>
-        <i className="bi bi-chevron-down"></i>
+            <i className="bi bi-layout-text-window-reverse"><label className='ms-2 txtCol'>Tables</label></i>
+            <i className="bi bi-chevron-down"></i>
         </div>
         <div className="collapse" id="Tables">
             <ul style={{listStyle:'circle'}} className='txtCol'>
@@ -51,8 +51,8 @@ const SideBar = (props:sidebarProps) => {
             </ul>
         </div>
         <div className="d-flex justify-content-between p-3 ms-2 box" data-bs-toggle="collapse" data-bs-target="#Charts" aria-expanded="false" aria-controls="Charts">
-        <i className="bi bi-bar-chart"><label className='ms-2 txtCol'>Charts</label></i>
-        <i className="bi bi-chevron-down"></i>
+            <i className="bi bi-bar-chart"><label className='ms-2 txtCol'>Charts</label></i>
+            <i className="bi bi-chevron-down"></i>
         </div>
         <div className="collapse" id="Charts">
             <ul style={{listStyle:'circle'}} className='txtCol'>
@@ -62,8 +62,8 @@ const SideBar = (props:sidebarProps) => {
             </ul>
         </div>
         <div className="d-flex justify-content-between p-3 ms-2 box " data-bs-toggle="collapse" data-bs-target="#Icons" aria-expanded="false" aria-controls="Icons">
-        <i className="bi bi-gem"><label className='ms-2 txtCol'>Icons</label></i>
-        <i className="bi bi-chevron-down"></i>
+            <i className="bi bi-gem"><label className='ms-2 txtCol'>Icons</label></i>
+            <i className="bi bi-chevron-down"></i>
         </div>
         <div className="collapse" id="Icons">
             <ul style={{listStyle:'circle'}} className='txtCol'>
@@ -74,28 +74,28 @@ const SideBar = (props:sidebarProps) => {
         </div>
         <label className='fSize ms-3 p-2 text-secondary fw-bold'>PAGES</label>
         <div className="d-flex justify-content-between p-3 ms-2 box" >
-        <i className="bi bi-person"><label className='ms-2 txtCol'>Profile</label></i>
+            <i className="bi bi-person"><label className='ms-2 txtCol'>Profile</label></i>
         </div>
         <div className="d-flex justify-content-between p-3 ms-2 box " >
-        <i className="bi bi-question-circle"><label className='ms-2 txtCol'>F.A.Q</label></i>
+            <i className="bi bi-question-circle"><label className='ms-2 txtCol'>F.A.Q</label></i>
         </div>
         <div className="d-flex justify-content-between p-3 ms-2 box " >
-        <i className="bi bi-envelope"><label className='ms-2 txtCol'>Contact</label></i>
+            <i className="bi bi-envelope"><label className='ms-2 txtCol'>Contact</label></i>
         </div>
         <div className="d-flex justify-content-between p-3 ms-2 box " >
-        <i className="bi bi-card-list"><label className='ms-2 txtCol'>Register</label></i>
+            <i className="bi bi-card-list"><label className='ms-2 txtCol'>Register</label></i>
         </div>
         <div className="d-flex justify-content-between p-3 ms-2 box " >
-        <i className="bi bi-box-arrow-in-right"><label className='ms-2 txtCol'>Login</label></i>
+            <i className="bi bi-box-arrow-in-right"><label className='ms-2 txtCol'>Login</label></i>
         </div>
         <div className="d-flex justify-content-between p-3 ms-2 box " >
-        <i className="bi bi-dash-circle"><label className='ms-2 txtCol'>Error 404</label></i>
+            <i className="bi bi-dash-circle"><label className='ms-2 txtCol'>Error 404</label></i>
         </div>
         <div className="d-flex justify-content-between p-3 ms-2 box " >
-        <i className="bi bi-file-earmark"><label className='ms-2 txtCol'>Blank</label></i>
+            <i className="bi bi-file-earmark"><label className='ms-2 txtCol'>Blank</label></i>
         </div>
     </div>
-  )
+    )
 }
 
 export default SideBar

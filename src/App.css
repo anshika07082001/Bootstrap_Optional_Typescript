@@ -40,17 +40,20 @@ body {
 }
 
 .padLeftSmall {
-  padding-left: 360px !important;
+  padding-left: 320px !important;
   padding-top: 30px !important;
+  padding-right: 20px !important;
 }
 
 .padLeftBig  {
   padding-top: 30px !important;
+  padding-left: 20px !important;
 }
 
 .heightMax {
   max-height: 90vh !important;
   overflow-y: scroll;
+  max-width: 300px !important;
 }
 
 .show {
@@ -59,4 +62,11 @@ body {
 
 .hide {
   display: none;
+}
+
+@media screen and (max-width:950px) {
+  .padLeft {
+    padding-left: 20px !important;
+    padding-right: 20px !important;
+  }  
 }
